@@ -53,6 +53,26 @@ export const missions: Mission[] = [
     imageAlt: "TEMPO instrument monitoring air pollution across North America from geostationary orbit",
   },
   {
+    id: "pace",
+    name: "PACE",
+    fullName: "Plankton, Aerosol, Cloud, ocean Ecosystem",
+    description:
+      "PACE carries advanced instruments including OCI, SPEXone, and HARP2 to provide hyperspectral ocean color and detailed aerosol characterization. It delivers unprecedented information about aerosol type, size, and light-absorption properties critical for understanding air quality and health impacts.",
+    relevance:
+      "Enhances BREATHE by providing detailed aerosol characterization — distinguishing dust, smoke, and urban pollution — so learners can understand not just how much particulate matter is present, but what kind it is and where it comes from.",
+    dataProducts: [
+      "Aerosol type and absorption properties",
+      "UV aerosol index",
+      "Fine-mode aerosol optical depth",
+      "Cloud droplet properties",
+      "Polarimetric aerosol retrievals",
+    ],
+    launchYear: "2024",
+    status: "Active",
+    url: "https://pace.gsfc.nasa.gov/",
+    imageAlt: "PACE satellite observing ocean color and atmospheric aerosols from orbit",
+  },
+  {
     id: "modis",
     name: "MODIS",
     fullName: "Moderate Resolution Imaging Spectroradiometer",

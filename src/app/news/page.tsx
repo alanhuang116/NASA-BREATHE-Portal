@@ -23,6 +23,13 @@ const newsItems = [
     featured: false,
   },
   {
+    date: "February 2026",
+    category: "NASA Data",
+    title: "NASA PACE Aerosol Characterization Data Integrated into BREATHE",
+    summary: "PACE hyperspectral and polarimetric aerosol products now available through the BREATHE data explorer, enabling learners to distinguish dust, smoke, and urban pollution sources from space.",
+    featured: false,
+  },
+  {
     date: "January 2026",
     category: "NASA Data",
     title: "MAIA PM2.5 Data Products Available for BREATHE Target Areas",

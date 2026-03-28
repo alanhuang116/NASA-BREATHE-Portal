@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "BREATHE connects NASA Earth science with STEM education and community learning on air pollution, extreme weather, and human health. Explore satellite data, learning modules, and citizen science opportunities.",
   keywords: [
-    "NASA", "air quality", "STEM education", "MAIA", "TEMPO", "atmosphere",
+    "NASA", "air quality", "STEM education", "MAIA", "TEMPO", "PACE", "atmosphere",
     "environmental health", "citizen science", "satellite data", "Science Activation",
   ],
   openGraph: {

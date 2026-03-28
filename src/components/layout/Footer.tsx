@@ -34,6 +34,7 @@ const footerSections = [
       { label: "NASA Worldview", href: "https://worldview.earthdata.nasa.gov/" },
       { label: "TEMPO Mission", href: "https://tempo.si.edu/" },
       { label: "MAIA Mission", href: "https://maia.jpl.nasa.gov/" },
+      { label: "PACE Mission", href: "https://pace.gsfc.nasa.gov/" },
       { label: "NASA Earthdata", href: "https://earthdata.nasa.gov/" },
     ],
   },

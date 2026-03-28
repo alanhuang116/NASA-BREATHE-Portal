@@ -4,11 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import { missions, nasaDataTools } from "@/data/missions";
 
-type DataLayer = "tempo-no2" | "maia-pm25" | "modis-aod" | "fires" | "lst";
+type DataLayer = "tempo-no2" | "maia-pm25" | "pace-aerosol" | "modis-aod" | "fires" | "lst";
 
 const dataLayers: { id: DataLayer; label: string; mission: string; description: string; color: string }[] = [
   { id: "tempo-no2", label: "TEMPO NO₂", mission: "TEMPO", description: "Hourly nitrogen dioxide concentrations across North America", color: "#E74C3C" },
   { id: "maia-pm25", label: "MAIA PM2.5", mission: "MAIA", description: "Particulate matter concentration estimates at community scale", color: "#F39C12" },
+  { id: "pace-aerosol", label: "PACE Aerosol Type", mission: "PACE", description: "Aerosol characterization distinguishing dust, smoke, and urban pollution", color: "#2980B9" },
   { id: "modis-aod", label: "Aerosol Optical Depth", mission: "MODIS/VIIRS", description: "Total column aerosol loading from polar-orbiting satellites", color: "#9B59B6" },
   { id: "fires", label: "Fire & Smoke", mission: "MODIS/VIIRS", description: "Active fire detections and smoke plume tracking", color: "#E67E22" },
   { id: "lst", label: "Land Surface Temperature", mission: "MODIS/VIIRS", description: "Surface temperature for heat island and exposure analysis", color: "#1ABC9C" },
@@ -161,7 +162,7 @@ export default function ExplorePage() {
                   <h3 className="text-xl font-semibold text-breathe-dark mb-2">Interactive Data Map</h3>
                   <p className="text-breathe-gray max-w-md mx-auto text-sm">
                     This interactive map will display NASA satellite data layers including
-                    TEMPO NO₂, MAIA PM2.5, aerosol optical depth, fire detections, and
+                    TEMPO NO₂, MAIA PM2.5, PACE aerosol type, aerosol optical depth, fire detections, and
                     land surface temperature. Users can zoom, pan, click for data values,
                     and compare locations.
                   </p>

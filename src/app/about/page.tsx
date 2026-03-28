@@ -14,6 +14,7 @@ const teamCategories = [
     members: [
       { name: "MAIA Science Advisor", affiliation: "NASA JPL", role: "MAIA data products and aerosol science guidance" },
       { name: "TEMPO Science Advisor", affiliation: "SAO / NASA", role: "TEMPO data interpretation and air quality science" },
+      { name: "PACE Science Advisor", affiliation: "NASA GSFC", role: "PACE aerosol characterization and ocean-atmosphere science" },
       { name: "Earth Science Communicator", affiliation: "NASA GSFC", role: "Science communication and content review" },
     ],
   },
@@ -29,7 +30,7 @@ const teamCategories = [
 
 const timeline = [
   { year: "Year 1", period: "2025-2026", label: "Pilot", activities: ["Launch Houston and border region pilots", "Develop core learning modules", "Build MVP online platform", "Establish community partnerships", "Deploy initial citizen science activities"] },
-  { year: "Year 2", period: "2026-2027", label: "Expand", activities: ["Add Dallas-Fort Worth and San Antonio regions", "Expand module library", "Launch educator professional development", "Scale citizen science monitoring network", "Integrate MAIA data products as available"] },
+  { year: "Year 2", period: "2026-2027", label: "Expand", activities: ["Add Dallas-Fort Worth and San Antonio regions", "Expand module library", "Launch educator professional development", "Scale citizen science monitoring network", "Integrate MAIA and PACE data products as available"] },
   { year: "Year 3", period: "2027-2028", label: "Deepen", activities: ["Full Texas coverage through school district partnerships", "Community college integration", "Advanced data investigation modules", "Regional data story publications", "Mid-project evaluation and refinement"] },
   { year: "Year 4", period: "2028-2029", label: "Scale", activities: ["National expansion through education networks", "Multi-state community partnerships", "Platform feature maturation", "Sustainability planning initiated", "National educator PD network"] },
   { year: "Year 5", period: "2029-2030", label: "Sustain", activities: ["Full national reach through online platform", "Sustainability model implemented", "Final evaluation and impact reporting", "Resource archiving and long-term access planning", "Transition to post-award maintenance model"] },
@@ -69,7 +70,7 @@ export default function AboutPage() {
             BREATHE connects NASA Earth science resources with STEM education and
             community learning to help people understand how air pollution, extreme
             weather, and atmospheric conditions affect health in their communities.
-            We bring satellite observations from missions like MAIA and TEMPO into
+            We bring satellite observations from missions like MAIA, TEMPO, and PACE into
             classrooms, community workshops, and citizen science activities, moving
             learners from awareness to active contribution.
           </p>

@@ -39,8 +39,8 @@ const resourceCategories = [
   },
   {
     name: "Mission Explainers",
-    count: 4,
-    description: "Plain-language guides to MAIA, TEMPO, MODIS, and VIIRS",
+    count: 5,
+    description: "Plain-language guides to MAIA, TEMPO, PACE, MODIS, and VIIRS",
     link: "/explore",
   },
   {

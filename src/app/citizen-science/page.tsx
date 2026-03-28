@@ -20,7 +20,7 @@ const activities = [
       "Note any visible haze, smoke, or dust",
       "Submit your observation with GPS location",
     ],
-    nasaConnection: "Supports validation of MAIA aerosol optical depth and MODIS cloud products",
+    nasaConnection: "Supports validation of MAIA aerosol optical depth, PACE aerosol type retrievals, and MODIS cloud products",
     citizenScienceProgram: "GLOBE Observer",
   },
   {
@@ -78,7 +78,7 @@ const activities = [
       "Synthesize findings into a community data story",
       "Present at a BREATHE workshop or share on the portal",
     ],
-    nasaConnection: "Full suite of TEMPO, MAIA, MODIS, and VIIRS data products",
+    nasaConnection: "Full suite of TEMPO, MAIA, PACE, MODIS, and VIIRS data products",
     citizenScienceProgram: "BREATHE Community Investigations",
   },
 ];

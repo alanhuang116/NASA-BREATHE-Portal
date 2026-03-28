@@ -66,6 +66,11 @@ function HeroSection() {
               <div className="text-2xl font-bold text-white mt-1">Aerosols at Community Scale</div>
               <div className="text-xs text-white/60 mt-2">Connecting satellites to local health</div>
             </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+              <div className="text-sm font-medium text-white/80">PACE — Aerosol Characterization</div>
+              <div className="text-2xl font-bold text-white mt-1">Know What You Breathe</div>
+              <div className="text-xs text-white/60 mt-2">Dust, smoke, or urban pollution — identified</div>
+            </div>
           </div>
         </div>
       </div>
@@ -84,7 +89,7 @@ function HeroSection() {
 }
 
 function MissionSpotlightSection() {
-  const spotlightMissions = missions.filter((m) => m.id === "maia" || m.id === "tempo");
+  const spotlightMissions = missions.filter((m) => m.id === "maia" || m.id === "tempo" || m.id === "pace");
 
   return (
     <section className="py-16 bg-white" aria-labelledby="missions-heading">
@@ -95,11 +100,11 @@ function MissionSpotlightSection() {
           </h2>
           <p className="mt-3 text-breathe-gray max-w-2xl mx-auto">
             BREATHE brings observations from cutting-edge NASA satellite missions
-            into classrooms and communities. Two missions are at the center of our work.
+            into classrooms and communities. Three missions are at the center of our work.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {spotlightMissions.map((mission) => (
             <div
               key={mission.id}
@@ -146,7 +151,7 @@ function MissionSpotlightSection() {
         {/* Additional missions row */}
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
           {missions
-            .filter((m) => m.id !== "maia" && m.id !== "tempo")
+            .filter((m) => m.id !== "maia" && m.id !== "tempo" && m.id !== "pace")
             .map((mission) => (
               <div key={mission.id} className="breathe-card bg-breathe-light rounded-xl p-4 border border-breathe-border">
                 <h4 className="font-semibold text-nasa-blue">{mission.name}</h4>
@@ -299,6 +304,7 @@ function DataExplorerPreview() {
               {[
                 "View TEMPO hourly NO₂ and ozone data",
                 "Explore MAIA PM2.5 concentration maps",
+                "Identify aerosol types with PACE data",
                 "Compare your community to regional averages",
                 "Track wildfire smoke and dust events",
               ].map((item) => (
@@ -330,7 +336,7 @@ function DataExplorerPreview() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                   </svg>
                   <p className="text-gray-500 text-sm">Interactive Map — NASA Air Quality Data</p>
-                  <p className="text-gray-600 text-xs mt-1">TEMPO NO₂ • MAIA PM2.5 • Fire & Smoke</p>
+                  <p className="text-gray-600 text-xs mt-1">TEMPO NO₂ • MAIA PM2.5 • PACE Aerosol Type • Fire & Smoke</p>
                 </div>
               </div>
               {/* Decorative data layer hints */}
@@ -340,6 +346,9 @@ function DataExplorerPreview() {
                 </div>
                 <div className="px-2 py-1 bg-breathe-atmosphere/20 text-breathe-atmosphere text-xs rounded border border-breathe-atmosphere/30">
                   MAIA PM2.5
+                </div>
+                <div className="px-2 py-1 bg-blue-400/20 text-blue-400 text-xs rounded border border-blue-400/30">
+                  PACE Aerosol
                 </div>
               </div>
               <div className="absolute bottom-4 right-4">
@@ -597,7 +606,7 @@ function PartnerTrustSection() {
           A NASA Science Activation Project — Supported by Leading Partners
         </p>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60">
-          {["NASA SMD", "MAIA Mission", "TEMPO Mission", "NASA Earthdata", "University Partners", "Community Organizations"].map(
+          {["NASA SMD", "MAIA Mission", "TEMPO Mission", "PACE Mission", "NASA Earthdata", "University Partners", "Community Organizations"].map(
             (partner) => (
               <div key={partner} className="text-sm font-medium text-breathe-dark">
                 {partner}
@@ -621,6 +630,11 @@ function NewsPreviewSection() {
       date: "February 2026",
       title: "New TEMPO Data Products Available for Education",
       description: "Hourly NO₂ data now integrated into BREATHE learning modules for classroom use.",
+    },
+    {
+      date: "February 2026",
+      title: "NASA PACE Aerosol Products Integrated into BREATHE Explorer",
+      description: "PACE hyperspectral aerosol type data now available, enabling learners to distinguish dust, smoke, and urban pollution sources.",
     },
     {
       date: "January 2026",

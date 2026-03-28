@@ -19,10 +19,10 @@ export const learningModules: LearningModule[] = [
     title: "What's in the Air?",
     subtitle: "Introduction to Air Quality and NASA Observations",
     description:
-      "Discover what air quality means, why it matters for health, and how NASA satellites like TEMPO and MAIA observe the atmosphere from space. Explore real satellite imagery and compare air quality across different communities.",
+      "Discover what air quality means, why it matters for health, and how NASA satellites like TEMPO, MAIA, and PACE observe the atmosphere from space. Explore real satellite imagery and compare air quality across different communities.",
     gradeLevel: "Grades 6-8",
     duration: "45-60 minutes",
-    nasaAssets: ["TEMPO NO₂ data", "NASA Worldview", "MAIA aerosol imagery"],
+    nasaAssets: ["TEMPO NO₂ data", "NASA Worldview", "MAIA aerosol imagery", "PACE aerosol type maps"],
     objectives: [
       "Define key air pollutants (PM2.5, ozone, NO₂) and their health effects",
       "Explain how satellites measure atmospheric composition from orbit",
@@ -62,7 +62,7 @@ export const learningModules: LearningModule[] = [
       "Investigate how MAIA measures particulate matter from space and why PM2.5 is one of the most significant air pollutants for human health. Analyze MAIA data products to map PM concentrations and explore environmental justice dimensions.",
     gradeLevel: "Grades 9-12",
     duration: "90 minutes (2 class periods)",
-    nasaAssets: ["MAIA PM2.5 estimates", "MAIA aerosol optical depth", "EPA AirNow ground data"],
+    nasaAssets: ["MAIA PM2.5 estimates", "MAIA aerosol optical depth", "PACE aerosol type classification", "EPA AirNow ground data"],
     objectives: [
       "Explain how multi-angle imaging retrieves aerosol properties from space",
       "Interpret PM2.5 concentration maps from MAIA data",
@@ -102,7 +102,7 @@ export const learningModules: LearningModule[] = [
       "Design, build, and deploy a low-cost air quality sensor in your community. Learn sensor science, data collection methods, and how to compare your ground-based measurements with NASA satellite observations to validate and contextualize your findings.",
     gradeLevel: "Grades 8-12 / Community",
     duration: "Multi-session project (4-6 hours total)",
-    nasaAssets: ["MAIA PM2.5 data", "TEMPO NO₂ data", "NASA citizen science protocols"],
+    nasaAssets: ["MAIA PM2.5 data", "TEMPO NO₂ data", "PACE aerosol properties", "NASA citizen science protocols"],
     objectives: [
       "Assemble and calibrate a low-cost particulate matter sensor",
       "Design a sampling strategy for community air quality monitoring",
@@ -114,6 +114,26 @@ export const learningModules: LearningModule[] = [
     tags: ["citizen science", "sensors", "hands-on", "community"],
     status: "available",
     standards: ["NGSS HS-ESS3-4", "NGSS HS-ETS1-1", "NGSS HS-ETS1-3"],
+  },
+  {
+    id: "pace-aerosol-detective",
+    title: "Aerosol Detective",
+    subtitle: "Identifying Pollution Sources with NASA PACE",
+    description:
+      "Use NASA PACE's advanced aerosol characterization to investigate what types of particles are in the air — dust, wildfire smoke, sea salt, or urban pollution. Learn how hyperspectral and polarimetric measurements reveal not just how much particulate matter is present, but what it is and where it comes from.",
+    gradeLevel: "Grades 9-12",
+    duration: "60-90 minutes",
+    nasaAssets: ["PACE aerosol type data", "PACE UV aerosol index", "PACE polarimetric retrievals", "NASA Worldview"],
+    objectives: [
+      "Explain how PACE distinguishes different aerosol types using hyperspectral and polarimetric measurements",
+      "Interpret PACE aerosol classification maps to identify pollution sources",
+      "Compare PACE aerosol type data with MAIA PM2.5 and TEMPO NO₂ observations",
+      "Investigate how different aerosol types have different health impacts",
+    ],
+    engagementLevel: "experience",
+    tags: ["PACE", "aerosols", "pollution sources", "hyperspectral", "data analysis"],
+    status: "available",
+    standards: ["NGSS HS-ESS2-4", "NGSS HS-ESS3-4", "NGSS HS-ESS3-6"],
   },
   {
     id: "heat-and-health",
