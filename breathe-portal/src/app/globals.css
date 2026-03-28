@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  /* BREATHE Color System — atmosphere, Earth observation, health, trust */
+  --color-nasa-blue: #0B3D91;
+  --color-nasa-red: #FC3D21;
+  --color-breathe-sky: #1B98E0;
+  --color-breathe-sky-light: #E8F4FD;
+  --color-breathe-atmosphere: #4ECDC4;
+  --color-breathe-health: #2ECC71;
+  --color-breathe-health-light: #E8F8F0;
+  --color-breathe-earth: #8B6914;
+  --color-breathe-warm: #F39C12;
+  --color-breathe-alert: #E74C3C;
+  --color-breathe-dark: #1A1A2E;
+  --color-breathe-gray: #6B7280;
+  --color-breathe-light: #F8FAFC;
+  --color-breathe-border: #E2E8F0;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-breathe-dark);
+  background: white;
+}
+
+/* Atmospheric gradient for hero sections */
+.breathe-gradient {
+  background: linear-gradient(135deg, #0B3D91 0%, #1B98E0 40%, #4ECDC4 70%, #2ECC71 100%);
+}
+
+.breathe-gradient-subtle {
+  background: linear-gradient(180deg, #E8F4FD 0%, #FFFFFF 100%);
+}
+
+/* NASA trust bar styling */
+.nasa-trust-bar {
+  background: var(--color-nasa-blue);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0;
+}
+
+/* Leaflet map container fix */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 3px solid var(--color-breathe-sky);
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--color-nasa-blue);
+  color: white;
+  border-radius: 0 0 0.5rem 0.5rem;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Module progress bar */
+.progress-bar {
+  background: var(--color-breathe-border);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  background: linear-gradient(90deg, var(--color-breathe-sky), var(--color-breathe-atmosphere));
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.5s ease;
+}
+
+/* Engagement ladder visual */
+.engagement-step {
+  position: relative;
+  padding-left: 2rem;
+}
+.engagement-step::before {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-breathe-border);
+}
+.engagement-step:last-child::before {
+  display: none;
+}
+
+/* Card hover effects */
+.breathe-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.breathe-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(11, 61, 145, 0.1);
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  h1 { font-size: 1.75rem !important; }
+  h2 { font-size: 1.375rem !important; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .breathe-card {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Print styles */
+@media print {
+  nav, footer, .no-print { display: none !important; }
+  .breathe-gradient { background: #0B3D91 !important; color: white; }
+}
